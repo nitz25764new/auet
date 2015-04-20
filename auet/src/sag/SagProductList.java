@@ -2,6 +2,7 @@ package sag;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -13,6 +14,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class SagProductList {
 	
+	private ArrayList<SagProduct> sagList; 
+	private int size;
 	
 	class SagProduct {
 		
@@ -26,20 +29,19 @@ public class SagProductList {
 			this.canonical = canonical;
 		}
 	}
-	private SagProduct[] sagList; 
-	private int size;
 	
 	public SagProductList(){
-		this.sagList = new SagProduct[1000];
+		this.sagList = new ArrayList<SagProduct>();
 		this.size = 0;
 	}
 	//adds a new sag product
 	public void add(String productDetails, String version, String canonical){
 		SagProduct product = new SagProduct(productDetails,version,canonical);
-		this.sagList[this.size++] = product;
+		this.sagList.add(product);
 	}
 	//displays sag product list
 	public void displayList(){
+		if(sagList.size()>0)
 		for(SagProduct s:this.sagList){
 			System.out.println(s.productDetails);
 			System.out.println(s.version);
@@ -58,6 +60,7 @@ public class SagProductList {
         Map<String, Object[]> data = new TreeMap<String, Object[]>();
         data.put("1",new Object[]{"Product Details", "Version", "Canonical name"});
         int count = 2;
+        if(sagList.size()>0)
         for(SagProduct s:this.sagList){
         	System.out.println(s.productDetails);
         	data.put(Integer.toString(count), new Object[]{s.productDetails,s.version,s.canonical});
@@ -84,7 +87,7 @@ public class SagProductList {
         try
         {
             //Write the workbook in file system
-            FileOutputStream out = new FileOutputStream(new File("Sag_Products.xlsx"));
+            FileOutputStream out = new FileOutputStream(new File("C:/Sag_Products.xlsx"));
             workbook.write(out);
             out.close();
             System.out.println("File report Sag_Products.xlsx created. ");

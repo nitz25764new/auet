@@ -9,5 +9,10 @@
 	<classpathentry kind="lib" path="C:/Documents and Settings/mano/My Documents/Downloads/Compressed/poi-bin-3.11-20141221.tar/poi-bin-3.11-20141221/poi-3.11/poi-ooxml-3.11-20141221.jar"/>
 	<classpathentry kind="lib" path="C:/Documents and Settings/mano/My Documents/Downloads/Compressed/poi-bin-3.11-20141221.tar/poi-bin-3.11-20141221/poi-3.11/poi-ooxml-schemas-3.11-20141221.jar"/>
 	<classpathentry kind="lib" path="C:/Documents and Settings/mano/My Documents/Downloads/Compressed/poi-bin-3.11-20141221.tar/poi-bin-3.11-20141221/poi-3.11/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/mano/Desktop/auet/sqljdbc.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/mano/My Documents/manoj/extra/scam/plugins/eclipse-equinox-common-3.5.0.jar/eclipse-equinox-common-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/mano/My Documents/manoj/extra/scam/plugins/org.eclipse.core.commands_3.6.100.v20140528-1422.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/mano/My Documents/manoj/extra/scam/plugins/swt-4.4.2-win32-win32-x86/swt-debug.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/mano/My Documents/manoj/extra/scam/plugins/swt-4.4.2-win32-win32-x86/swt.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
